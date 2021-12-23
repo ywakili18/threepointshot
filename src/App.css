@@ -3,9 +3,30 @@ body {
   background-color: #14213d;
   color: #ffffff;
   font-family: 'Graduate', cursive;
+  margin: auto;
+  box-sizing: border-box;
 }
 nav :hover {
   color: rgb(0, 0, 0);
   transition: 0.2s;
   text-decoration: underline;
+}
+.enterBtn {
+  transition: 0.2s;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.threePtTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh;
+}
+img {
+  height: 100px;
 }
