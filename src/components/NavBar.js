@@ -1,11 +1,21 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { GiBasketballBasket } from 'react-icons/gi'
 const NavBar = () => {
   return (
-    <nav>
-      <NavLink to="/">Three point shot (icon goes here) </NavLink>
-      <NavLink to="/search">Players</NavLink>
-      <NavLink to="/about">About</NavLink>
+    <nav className="p-2 text-2xl bg-orange-400  flex justify-between">
+      <NavLink to="/" className="nav">
+        <GiBasketballBasket />
+      </NavLink>
+      <NavLink to="/search" className="nav">
+        Players
+      </NavLink>
+      <NavLink to="/about" className="nav">
+        About
+      </NavLink>
+      <NavLink to="/about" className="nav">
+        Github Repo{' '}
+      </NavLink>
     </nav>
   )
 }

@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+body {
+  background-color: #14213d;
+  color: rgb(245, 212, 172);
+  font-family: 'Graduate', cursive;
+}
+nav :hover {
+  color: red;
+  transition: 0.3s;
+}
