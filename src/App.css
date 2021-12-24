@@ -27,6 +27,13 @@ nav :hover {
   text-align: center;
   min-height: 50vh;
 }
-img {
-  height: 100px;
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh;
+}
+label {
+  color: #14213d;
 }

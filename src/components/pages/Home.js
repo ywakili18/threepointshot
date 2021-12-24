@@ -6,13 +6,17 @@ const Home = () => {
     history('/search')
   }
   return (
-    <div className="text-sm sm:text-2xl md:text-4xl">
+    <div className="text-xl sm:text-2xl md:text-4xl">
       <h1 className="threePtTitle text-center mt-2">
-        3pointshot{' '}
-        <img src="https://i.giphy.com/media/xT9IgCfqoMQEWOUef6/giphy.webp" />
+        <span className="text-orange-400 sm:text-5xl">3</span>pointshot{' '}
+        <img
+          src="https://i.giphy.com/media/xT9IgCfqoMQEWOUef6/giphy.webp"
+          className="h-12 sm:h-24"
+          alt="Basketball spinning"
+        />
       </h1>
       <div className="home">
-        <p>search for nba player stats</p>
+        <p>search for nba player stats </p>
         <button
           onClick={onClick}
           className="

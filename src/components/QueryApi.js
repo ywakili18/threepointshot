@@ -1,20 +1,20 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 const QueryApi = ({ player }) => {
   // call use effect to perform api request, passing in player data into api.
-
+  const [playerData, setPlayerData] = useState([])
   useEffect(() => {
     const getResults = () => {
       axios
         .get(`https://www.balldontlie.io/api/v1/players/?search=${player}`)
-        .then((res) => console.log(res.data))
+        .then((res) => setPlayerData(res.data.data))
         .catch((e) => console.log('Error: ', e))
     }
 
     getResults()
   }, [])
-
+  playerData.map((item) => console.log(item.id))
   return (
     <div>
       <h1>This is QueryApi component.</h1>
