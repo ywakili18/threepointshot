@@ -41,15 +41,15 @@ const Home = () => {
           onClick={onClick}
         >
           <span
-            class="absolute inset-0 flex items-center justify-center 
+            className="absolute inset-0 flex items-center justify-center 
           text-black duration-300 -translate-x-full bg-orange-400 group-hover:translate-x-0 ease"
           >
             <IoMdBasketball />
           </span>
-          <span class="absolute flex items-center justify-center w-full  text-orange-300 transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center w-full  text-orange-300 transition-all duration-300 transform group-hover:translate-x-full ease">
             kobe!
           </span>
-          <span class="relative invisible">Button Text</span>
+          <span className="relative invisible">Button Text</span>
         </button>
       </div>
     </div>
