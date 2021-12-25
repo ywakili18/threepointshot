@@ -14,6 +14,7 @@ const QueryApi = ({ player }) => {
 
     getResults()
   }, [])
+  // Mapped through data to grab id. Need to pass Id into a second api call, to grab season averages.
   playerData.map((item) => console.log(item.id))
   return (
     <div>
