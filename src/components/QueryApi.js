@@ -15,11 +15,12 @@ const QueryApi = ({ player }) => {
     getResults()
   }, [])
   // Mapped through data to grab id. Need to pass Id into a second api call, to grab season averages.
-  playerData.map((item) => console.log(item.id))
+  playerData.map((item) => console.log(item))
   return (
     <div>
       <h1>This is QueryApi component.</h1>
       <p>This is the data from the input form, from SearchForm.js: {player}</p>
+      <button>asd</button>
     </div>
   )
 }

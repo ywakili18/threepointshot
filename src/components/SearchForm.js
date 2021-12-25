@@ -5,13 +5,11 @@ const SearchForm = ({ player, setPlayer }) => {
 
   const handleChange = (e) => {
     setPlayer(e.target.value)
-    console.log({ player })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = { player }
-    console.log(data, 'THIS THEDATA')
     history('/results')
   }
   return (

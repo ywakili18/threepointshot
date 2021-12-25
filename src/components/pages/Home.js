@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { IoMdBasketball } from 'react-icons/io'
 const Home = () => {
   const history = useNavigate()
   const onClick = () => {
@@ -18,13 +19,37 @@ const Home = () => {
       <div className="home">
         <p>search for nba player stats </p>
         <button
-          onClick={onClick}
+          href="#_"
           className="
-            enterBtn border-2 rounded-lg p-1 
+          relative 
+          inline-flex 
+          items-center 
+          justify-center 
+          border-2 
+          rounded-lg 
+          p-1 
+          w-28
+          ml-10
+          h-12
+          overflow-hidden 
+          font-medium 
           text-orange-300 
-          hover:text-black hover:bg-orange-400 hover:border-black ml-4"
+          transition duration-900   
+          border-purple-100 
+          shadow-md group 
+          hover:border-black"
+          onClick={onClick}
         >
-          kobe!
+          <span
+            class="absolute inset-0 flex items-center justify-center 
+          text-black duration-300 -translate-x-full bg-orange-400 group-hover:translate-x-0 ease"
+          >
+            <IoMdBasketball />
+          </span>
+          <span class="absolute flex items-center justify-center w-full  text-orange-300 transition-all duration-300 transform group-hover:translate-x-full ease">
+            kobe!
+          </span>
+          <span class="relative invisible">Button Text</span>
         </button>
       </div>
     </div>
