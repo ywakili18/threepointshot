@@ -1,26 +1,35 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import PlayerCard from '../PlayerCard'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 const PlayerPage = ({ player }) => {
+  const history = useNavigate()
   const [playerData, setPlayerData] = useState([])
-
   useEffect(() => {
-    const getResults = () => {
-      axios
+    const getResults = async () => {
+      await axios
         .get(`https://www.balldontlie.io/api/v1/players/?search=${player}`)
-        .then(async (res) => {
-          setPlayerData(res.data.data)
+        .then((res) => {
+          if (res.data.data[0] === undefined) {
+            alert('Player does not exist')
+            history('/search')
+          } else if (res.data.data.length > 1) {
+            alert('Enter a more specific name')
+            history('/search')
+          } else {
+            setPlayerData(res.data.data)
+          }
         })
         .catch((e) => console.log('Error: ', e))
     }
     getResults()
   }, [])
-
-  // Mapped through data to grab id. Need to pass Id into a second api call, to grab season averages.
   return (
     <div>
-      <PlayerCard playerData={playerData} />
+      <div>
+        <PlayerCard playerData={playerData} player={player} />
+      </div>
     </div>
   )
 }
