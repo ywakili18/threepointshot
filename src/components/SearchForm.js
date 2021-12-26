@@ -9,7 +9,6 @@ const SearchForm = ({ player, setPlayer }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const data = { player }
     history('/results')
   }
   return (

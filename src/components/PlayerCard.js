@@ -1,7 +1,9 @@
 import React from 'react'
-
+import ViewStats from './pages/ViewStats'
 const PlayerCard = ({ playerData }) => {
-  console.log(playerData)
+  const onClick = (e) => {
+    console.log(e.target.value)
+  }
   return (
     <div className=" grid text-center justify-evenly text-xl sm:text-2xl md:text-3xl">
       {playerData.map((player) => (
@@ -33,9 +35,12 @@ const PlayerCard = ({ playerData }) => {
               className="
             enterBtn border-2 rounded-lg p-1 text-lg sm:text-xl md:text-2xl text-orange-300 
             hover:text-black hover:bg-orange-400 hover:border-black mt-2"
+              value={player.id}
+              onClick={onClick}
             >
               View stats
             </button>
+            <ViewStats playerData={playerData} />
           </ul>
         </div>
       ))}

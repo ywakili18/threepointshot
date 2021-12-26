@@ -1,16 +1,17 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import PlayerCard from './PlayerCard'
-const QueryApi = ({ player }) => {
-  // call use effect to perform api request, passing in player data into api.
+import PlayerCard from '../PlayerCard'
+const PlayerPage = ({ player }) => {
   const [playerData, setPlayerData] = useState([])
 
   useEffect(() => {
     const getResults = () => {
       axios
         .get(`https://www.balldontlie.io/api/v1/players/?search=${player}`)
-        .then((res) => setPlayerData(res.data.data))
+        .then(async (res) => {
+          setPlayerData(res.data.data)
+        })
         .catch((e) => console.log('Error: ', e))
     }
     getResults()
@@ -24,4 +25,4 @@ const QueryApi = ({ player }) => {
   )
 }
 
-export default QueryApi
+export default PlayerPage

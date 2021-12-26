@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './components/NavBar'
-import QueryApi from './components/QueryApi'
+import PlayerPage from './components/pages/PlayerPage'
 import SearchForm from './components/SearchForm'
 import Home from './components/pages/Home'
 import About from './components/pages/About'
@@ -18,7 +18,7 @@ function App() {
           path="/search"
           element={<SearchForm player={player} setPlayer={setPlayer} />}
         />
-        <Route path="/results" element={<QueryApi player={player} />} />
+        <Route path="/results" element={<PlayerPage player={player} />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>
