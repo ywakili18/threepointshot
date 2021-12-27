@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import PlayerCard from '../PlayerCard'
 import { useNavigate } from 'react-router-dom'
+
 import axios from 'axios'
 const PlayerPage = ({ player }) => {
   const history = useNavigate()

@@ -11,9 +11,6 @@ const NavBar = () => {
       <NavLink to="/search" className="nav">
         Players
       </NavLink>
-      <NavLink to="/about" className="nav">
-        about
-      </NavLink>
       <a
         href="https://github.com/ywakili18/threepointshot"
         className="nav"

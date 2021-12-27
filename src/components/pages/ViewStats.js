@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 const ViewStats = ({ player }) => {
   const [stats, setStats] = useState([])
+
   useEffect(() => {
     const getData = async () => {
       await axios
@@ -22,11 +23,23 @@ const ViewStats = ({ player }) => {
     }
     getData()
   }, [])
-  console.log(stats)
+
   return (
-    <div>
+    <div className="text-sm sm:text-lg md:text-2xl">
       {stats.map((stat) => (
-        <h3 key={stat.player_id}>{stat.season}</h3>
+        <ul key={stat.player_id} className="grid grid-cols-3 mt-10">
+          <li>{stat.pts} ppg</li>
+          <li>{stat.ast} apg</li>
+          <li>{stat.reb} reb</li>
+          <li>{stat.stl} stls</li>
+          <li>{stat.blk} blk</li>
+          <li>{stat.fg_pct.toFixed(4) * 100} FG%</li>
+          <li>{stat.fga} FGA</li>
+          <li>{stat.ft_pct.toFixed(2) * 100} FT%</li>
+          <li>{stat.games_played} Games played</li>
+          <li>{stat.min} Avg Min</li>
+          <li>{stat.turnover} Turnovers PG</li>
+        </ul>
       ))}
     </div>
   )
