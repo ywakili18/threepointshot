@@ -1,6 +1,7 @@
 import React from 'react'
 import ViewStats from './pages/ViewStats'
 import { GiBasketballJersey } from 'react-icons/gi'
+import { motion } from 'framer-motion'
 const PlayerCard = ({ playerData, player }) => {
   return (
     <div>
@@ -22,10 +23,7 @@ const PlayerCard = ({ playerData, player }) => {
       </div>
       <div className=" grid text-center text-xl sm:text-2xl md:text-3xl">
         {playerData.map((pro) => (
-          <div
-            key={pro.id}
-            className="border-2 border-orange-500  mt-2 text-orange-400 p-10"
-          >
+          <div key={pro.id} className="mt-2 text-orange-400 p-10">
             <ul>
               <li className="bg-orange-500 text-black font-black">
                 {pro.first_name} {pro.last_name}
@@ -47,7 +45,18 @@ const PlayerCard = ({ playerData, player }) => {
                 </span>
               </li>
             </ul>
-            <ViewStats playerData={playerData} player={player} />
+            <motion.div
+              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <ViewStats
+                playerData={playerData}
+                player={player}
+                className="viewStats"
+              />
+            </motion.div>
           </div>
         ))}
       </div>

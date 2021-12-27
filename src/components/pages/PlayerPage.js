@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import PlayerCard from '../PlayerCard'
 import { useNavigate } from 'react-router-dom'
-
+import { motion } from 'framer-motion'
 import axios from 'axios'
 const PlayerPage = ({ player }) => {
   const history = useNavigate()
@@ -28,9 +28,14 @@ const PlayerPage = ({ player }) => {
   }, [])
   return (
     <div>
-      <div>
+      <motion.div
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <PlayerCard playerData={playerData} player={player} />
-      </div>
+      </motion.div>
     </div>
   )
 }

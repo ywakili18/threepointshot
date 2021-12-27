@@ -5,6 +5,7 @@ body {
   font-family: 'Graduate', cursive;
   margin: auto;
   box-sizing: border-box;
+  transition: 1s;
 }
 nav :hover {
   color: rgb(0, 0, 0);
@@ -33,4 +34,7 @@ nav :hover {
   align-items: center;
   text-align: center;
   min-height: 50vh;
+}
+.viewStats {
+  transition: 1s;
 }

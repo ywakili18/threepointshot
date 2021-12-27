@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IoSearchCircleSharp } from 'react-icons/io5'
 import { GiBasketballJersey } from 'react-icons/gi'
+import { motion } from 'framer-motion'
 const SearchForm = ({ player, setPlayer }) => {
   const history = useNavigate()
 
@@ -14,11 +15,16 @@ const SearchForm = ({ player, setPlayer }) => {
     history('/results')
   }
   return (
-    <div className=" text-xl sm:text-2xl md:text-4xl">
+    <div className="text-xl sm:text-2xl md:text-4xl">
       <div className="flex justify-center">
-        <p className="text-center text-lg mt-10">Search for a player here</p>
         <p className=" items-center flex mt-10">
-          <GiBasketballJersey className="text-orange-400" />
+          <GiBasketballJersey className="text-orange-400 text-xl sm:text-2xl md:text-5xl" />
+        </p>
+        <p className="text-center mt-10">
+          Search for a <span className="text-red-400">player</span> here
+        </p>
+        <p className=" items-center flex mt-10">
+          <GiBasketballJersey className="text-orange-400 text-xl sm:text-2xl md:text-5xl" />
         </p>
       </div>
 
@@ -33,16 +39,16 @@ const SearchForm = ({ player, setPlayer }) => {
           placeholder-slate-700
           bg-orange-400
           rounded-lg 
-          text-center text-2xl text-black p-1 focus:outline-none focus:ring focus:ring-orange-400
+          text-center text-xl text-black p-1 focus:outline-none focus:ring focus:ring-orange-400
           "
             required
           />
           <button
-            className=" enterBtn border-2 rounded-lg p-1 text-2xl
+            className=" enterBtn border-2 rounded-lg p-1
           text-orange-300 
           hover:text-black hover:bg-orange-400 hover:border-black ml-4 "
           >
-            <p className="flex text-3xl">
+            <p className="flex text-2xl">
               kobe!
               <IoSearchCircleSharp className="text-4xl" />
             </p>
