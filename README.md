@@ -69,3 +69,7 @@ Tailwindcss is the primary CSS library to help create a responsive design among 
 ## Screenshot
 
 ![screenshot](https://i.ibb.co/qCjgQTJ/Screen-Shot-2021-12-26-at-10-52-59-PM.png)
+
+# Credits
+
+S/O to DevDojo for the awesome tailwind css buttons. Used this for my homepage button. (https://devdojo.com/)
