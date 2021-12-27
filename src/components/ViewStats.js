@@ -23,9 +23,12 @@ const ViewStats = ({ player }) => {
     }
     getData()
   }, [])
-
+  const getPercentage = (stat) => {
+    let percent = stat * 100
+    return percent.toString().substring(0, 4)
+  }
   return (
-    <div className="text-sm sm:text-lg md:text-2xl">
+    <div className="text-sm sm:text-lg md:text-2xl text-indigo-100 stats">
       {stats.map((stat) => (
         <ul key={stat.player_id} className="grid grid-cols-3 mt-10">
           <li>{stat.pts} ppg</li>
@@ -33,9 +36,9 @@ const ViewStats = ({ player }) => {
           <li>{stat.reb} reb</li>
           <li>{stat.stl} stls</li>
           <li>{stat.blk} blk</li>
-          <li>{stat.fg_pct.toFixed(4) * 100} FG%</li>
+          <li>{getPercentage(stat.fg_pct)} FG%</li>
           <li>{stat.fga} FGA</li>
-          <li>{stat.ft_pct.toFixed(2) * 100} FT%</li>
+          <li>{getPercentage(stat.ft_pct)} FT%</li>
           <li>{stat.games_played} Games played</li>
           <li>{stat.min} Avg Min</li>
           <li>{stat.turnover} Turnovers PG</li>

@@ -22,7 +22,7 @@ const SearchForm = ({ player, setPlayer }) => {
           <GiBasketballJersey className="text-orange-400 text-xl sm:text-2xl md:text-5xl" />
         </p>
         <motion.p
-          className="text-center mt-10"
+          className="text-center text-base sm:text-2xl mt-10"
           transition={{ duration: 0.5 }}
           initial={{ y: 100 }}
           animate={{ y: 0 }}
@@ -46,14 +46,16 @@ const SearchForm = ({ player, setPlayer }) => {
           placeholder-slate-700
           bg-orange-400
           rounded-lg 
-          text-center text-xl text-black p-1 focus:outline-none focus:ring focus:ring-orange-400
+          text-center text-lg text-black p-1 focus:outline-none focus:ring focus:ring-orange-400
           "
             required
           />
           <button
-            className=" enterBtn border-2 rounded-lg p-1
+            className=" 
+            enterBtn border-2 rounded-lg p-1 mt-10 sm:mt-0
           text-orange-300 
-          hover:text-black hover:bg-orange-400 hover:border-black ml-4 "
+          hover:text-black hover:bg-orange-400 hover:border-black 
+          ml-4 "
           >
             <p className="flex text-2xl">
               kobe!

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
   background-color: #14213d;
   color: #ffffff;
@@ -25,7 +26,6 @@ nav :hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 50vh;
 }
 .searchForm {
   display: flex;
@@ -33,4 +33,7 @@ nav :hover {
   align-items: center;
   text-align: center;
   min-height: 50vh;
+}
+.stats {
+  font-family: 'Montserrat', sans-serif;
 }

@@ -9,25 +9,28 @@ const Home = () => {
   }
   return (
     <div className="text-xl sm:text-2xl md:text-4xl">
-      <h1 className="threePtTitle text-center mt-2">
+      <h1 className="threePtTitle text-center mt-40 ">
         <motion.span
           transition={{ duration: 0.5 }}
-          initial={{ y: 100 }}
+          initial={{ y: 50 }}
           animate={{ y: 0 }}
-          exit={{ y: 100 }}
+          exit={{ y: 50 }}
           className="text-orange-400 sm:text-5xl"
         >
           3
         </motion.span>
-        pointshot{' '}
+        pointshot
         <img
           src="https://i.giphy.com/media/xT9IgCfqoMQEWOUef6/giphy.webp"
           className="h-12 sm:h-24"
           alt="Basketball spinning"
         />
       </h1>
-      <div className="home">
-        <p>search for nba player stats </p>
+      <p className="text-center text-xs sm:text-lg md:text-2xl">
+        NBA player search tool for the 2021-2022 season
+      </p>
+      <div className="home mt-10">
+        <p className="text-sm sm:text-2xl">Search for player stats</p>
         <button
           href="#_"
           className="
@@ -38,7 +41,8 @@ const Home = () => {
           border-2 
           rounded-lg 
           p-1 
-          w-28
+          w-20
+          sm:w-28
           ml-10
           h-12
           overflow-hidden 

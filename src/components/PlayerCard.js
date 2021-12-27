@@ -1,5 +1,5 @@
 import React from 'react'
-import ViewStats from './pages/ViewStats'
+import ViewStats from './ViewStats'
 import { GiBasketballJersey } from 'react-icons/gi'
 import { motion } from 'framer-motion'
 const PlayerCard = ({ playerData, player }) => {

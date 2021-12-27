@@ -1,9 +1,10 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import PlayerCard from '../PlayerCard'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import axios from 'axios'
+
 const PlayerPage = ({ player }) => {
   const history = useNavigate()
   const [playerData, setPlayerData] = useState([])
@@ -26,6 +27,7 @@ const PlayerPage = ({ player }) => {
     }
     getResults()
   }, [])
+
   return (
     <div>
       <motion.div
