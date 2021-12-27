@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { IoSearchCircleSharp } from 'react-icons/io5'
 import { GiBasketballJersey } from 'react-icons/gi'
 import { motion } from 'framer-motion'
+
 const SearchForm = ({ player, setPlayer }) => {
   const history = useNavigate()
 
@@ -20,9 +21,15 @@ const SearchForm = ({ player, setPlayer }) => {
         <p className=" items-center flex mt-10">
           <GiBasketballJersey className="text-orange-400 text-xl sm:text-2xl md:text-5xl" />
         </p>
-        <p className="text-center mt-10">
+        <motion.p
+          className="text-center mt-10"
+          transition={{ duration: 0.5 }}
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          exit={{ y: 100 }}
+        >
           Search for a <span className="text-red-400">player</span> here
-        </p>
+        </motion.p>
         <p className=" items-center flex mt-10">
           <GiBasketballJersey className="text-orange-400 text-xl sm:text-2xl md:text-5xl" />
         </p>

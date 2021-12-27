@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IoMdBasketball } from 'react-icons/io'
+import { motion } from 'framer-motion'
 const Home = () => {
   const history = useNavigate()
   const onClick = () => {
@@ -9,7 +10,16 @@ const Home = () => {
   return (
     <div className="text-xl sm:text-2xl md:text-4xl">
       <h1 className="threePtTitle text-center mt-2">
-        <span className="text-orange-400 sm:text-5xl">3</span>pointshot{' '}
+        <motion.span
+          transition={{ duration: 0.5 }}
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          exit={{ y: 100 }}
+          className="text-orange-400 sm:text-5xl"
+        >
+          3
+        </motion.span>
+        pointshot{' '}
         <img
           src="https://i.giphy.com/media/xT9IgCfqoMQEWOUef6/giphy.webp"
           className="h-12 sm:h-24"
